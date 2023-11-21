@@ -6,13 +6,48 @@
 
 ## Team Members (Name and Student IDs)
 
+Ming Shan Lee, 1895899214
+Takaaki Morita, 
+
 ## Instructions to create a conda enviornment
 
 ## Instructions on how to install the required libraries
 
+`requirements.txt` lists out all the requiring packages you will need to reproduce this project. Run the code below to install all packages.
+
+### Usage
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Instructions on how to download the data
 
+In this project, we would be scraping data from yahoo finance and also using the yahoo finance python package. By running `get_data.py`, we would be scraping stock prices of the listing companies from September 2017 to October 2023:
+
+- Goldman Sachs Group Inc. (GS)
+- Morgan Stanley (MS)
+- JP Morgan Chase &co. (JPM)
+- Bank of America Corporation (BAC)
+- Citigroup Inc. (C)
+
+As for the yahoo finance package, it is imported in the `requirements.txt` and then
+
+### Usage
+
+```bash
+python get_data.py ticker
+```
+
 ## Instructions on how to clean the data
+
+`clean_data.py` would be converting time attribute to datetime using python datetime package, dropping missing values, removing comma separators, converting data types, sorting data to ensure it's in chronological order, resetting index, and at last, dropping values that is 0, which indicates that the market was not open.
+
+### Usage
+
+```bash
+python clean_data.py df
+```
 
 ## Instrucions on how to run analysis code
 
