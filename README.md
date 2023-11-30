@@ -6,8 +6,8 @@
 
 ## Team Members (Name and Student IDs)
 
-Ming Shan Lee, 1895899214
-Takaaki Morita, 
+Ming Shan Lee (ID: 1895899214)
+Takaaki Morita (ID: 7075405771) 
 
 ## Instructions to create a conda enviornment
 
