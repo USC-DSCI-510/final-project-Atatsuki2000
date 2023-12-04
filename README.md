@@ -17,7 +17,7 @@ Before starting, create a conda environment to reproduce the work.
 
 Use 
 ```bash
-conda create --name final_project_510 python=3.8
+conda create --name final_project_510 python=3.9
 ``` 
 to create a conda environment.
 
@@ -31,20 +31,30 @@ to activate the conda environment.
 
 `requirements.txt` lists out all the requiring packages you will need to reproduce this project. Run the code below to install all packages.
 
+Before running any code, please redirect your repository to `final-project-Atatsuki2000`
+
 ### Usage
 
 ```bash
-conda install -r requirements.txt
+cd final-project-Atatsuki2000
 ```
 
-## Instructions on how to redirect the repository
+then
+
+### Usage
+
+```bash
+pip install -r requirements.txt
+```
+
+## Instructions on how to redirect the repository before running project
 
 Before running any code, please redirect your repository to `src`
 
 ### Usage
 
 ```bash
-cd final-project-Atatsuki2000\src
+cd src
 ```
 
 ## Instructions on how to reproduce the work in one run
