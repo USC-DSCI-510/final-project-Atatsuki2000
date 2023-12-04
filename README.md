@@ -11,7 +11,7 @@ Post-Pandemic Analysis of Leading Investment Banks
 Ming Shan Lee (ID: 1895899214), 
 Takaaki Morita (ID: 7075405771) 
 
-## Instructions to create a conda enviornment
+## Instructions to create a conda environment
 
 Before starting, create a conda environment to reproduce the work.
 
@@ -59,7 +59,7 @@ cd src
 
 ## Instructions on how to reproduce the work in one run
 
-`main.py` would automatically run everything and doesn't require user to input any parameter. 
+`main.py` would automatically run everything, which is `get_data.py`, `clean_data.py`, `run_analysis.py`, and `visualize_results.py` and doesn't require user to input any parameter. 
 
 ### Usage
 
@@ -86,6 +86,7 @@ In this project, we would be scraping data from the yahoo finance webpage and al
 ```bash
 python get_data.py ticker
 ```
+Replace `ticker` to any valid company ticker. `ticker` should be one ticker at a time.
 
 After running this code, the terminal will output some snippet of the data and then save the data into the data\raw folder.
 
@@ -99,11 +100,13 @@ Run this when cleaning stock price data:
 ```bash
 python clean_data.py --stock_data stock_data_path
 ```
+Replace `stock_data_path` with your path to stock data.
 
 Run this when cleaning financial price data:
 ```bash
 python clean_data.py --financial_data financial_data_path
 ```
+Replace `financial_data_path` with your path to financial data.
 
 After running this code, the terminal will output some snippet of the data and then save the data into the data\processed folder.
 
@@ -111,11 +114,14 @@ After running this code, the terminal will output some snippet of the data and t
 
 `run_analysis.py` would be outputting analyses including statistical analysis of the financial data. We've tried to present the financial health of the companies, but due to lack of data, we were unable to do so.
 
+### Usage
+
 ```bash
 python run_analysis.py financial_data_path
 ```
+Replace `financial_data_path` with your path to financial data.
 
-After running this code, the terminal will output some snippet of the analysis and a new folder `analysis` will be created if not already exsists. The statistical analyses will be saved here.
+After running this code, the terminal will output some snippet of the analysis and a new folder `analysis` will be created if not already exists. The statistical analyses will be saved here.
 
 ## Instructions on how to create visualizations
 
@@ -125,5 +131,6 @@ After running this code, the terminal will output some snippet of the analysis a
 ```bash
 python visualize_results.py stock_data_path
 ```
+Replace `stock_data_path` with your path to stock data.
 
 After running this code, the terminall will first output the heatmap of the stock price data. Then, output some snippet of the data used in training and testing, the visualization of the machine learning model, and the metrics of the model. Both figures will be saved into a new folder `visualizations`.
